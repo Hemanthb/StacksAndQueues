@@ -45,7 +45,20 @@ namespace StacksAndQueues
                     Console.Write(temp.data + " -> ");
                     temp = temp.next;
                 }
+                Console.WriteLine();
             }
+        }
+
+        public void Dequeue()
+        {
+            if(front == null)
+            {
+                Console.WriteLine("Queue is Empty!!");
+                return;
+            }
+            Node temp = front;
+            front = front.next;
+            Console.WriteLine("Dequeued element is - " + temp.data);
         }
     }
 }
